@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+
+//DAY-1
 package com.scheduler.core
 
 public class JobTask<T> implements Task<T>, Comparable<JobTask<T>> {

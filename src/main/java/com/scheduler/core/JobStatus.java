@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+
+//DAY-1
 package com.scheduler.core
 
 public enum JobStatus{
