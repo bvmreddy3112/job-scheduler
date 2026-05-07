@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.scheduler.core
 
 public class JobTask<T> implements Task<T>, Comparable<JobTask<T>> {
@@ -51,3 +52,6 @@ public class JobTask<T> implements Task<T>, Comparable<JobTask<T>> {
     }
 
 }
+=======
+ 
+>>>>>>> f334def4172534cf41c274a077d1840234600346

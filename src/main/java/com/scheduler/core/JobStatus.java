@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.scheduler.core
 
 public enum JobStatus{
@@ -8,3 +9,6 @@ public enum JobStatus{
     FAILED,
     RETRYING,
 }
+=======
+ 
+>>>>>>> f334def4172534cf41c274a077d1840234600346
