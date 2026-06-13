@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-
 //DAY-1
-package com.scheduler.core
+package com.scheduler.core;
 
 public class JobTask<T> implements Task<T>, Comparable<JobTask<T>> {
 
@@ -25,7 +23,7 @@ public class JobTask<T> implements Task<T>, Comparable<JobTask<T>> {
     @Override
     public T execute() throws Exception{
 
-        this.stattus = JobStatus.RUNNING;
+        this.status = JobStatus.RUNNING;
         this.result = actualTask.execute();
         this.status = JobStatus.COMPLETED;
         return this.result;
@@ -50,10 +48,7 @@ public class JobTask<T> implements Task<T>, Comparable<JobTask<T>> {
     @Override
     public int compareTo(JobTask<T> other){
 
-        return Integer.compare(this.priority , other.priority)
+        return Integer.compare(this.priority , other.priority);
     }
 
 }
-=======
- 
->>>>>>> f334def4172534cf41c274a077d1840234600346
