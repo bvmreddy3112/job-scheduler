@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-
 //DAY-1
-package com.scheduler.core
+package com.scheduler.core;
 
 public enum JobStatus{
 
@@ -9,8 +7,5 @@ public enum JobStatus{
     RUNNING,
     COMPLETED,
     FAILED,
-    RETRYING,
+    RETRYING
 }
-=======
- 
->>>>>>> f334def4172534cf41c274a077d1840234600346
