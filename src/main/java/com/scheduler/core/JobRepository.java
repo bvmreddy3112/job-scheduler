@@ -55,7 +55,7 @@ public class JobRepository {
     catch (SQLException e) {
             System.err.println("[DB ERROR] Failed to log execution: " + e.getMessage());
         }
-
+    }
     public void moveToDeadLetter(JobTask<?> job , String jobType, String failureReason){
              String sql = "INSERT INTO dead_letter_jobs " +
                      "(job_id, job_type, priority, failure_reason, retry_count) " +
@@ -93,4 +93,4 @@ public class JobRepository {
         return pendingJobs;
     }
     } 
-}
+
