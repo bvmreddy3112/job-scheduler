@@ -24,12 +24,15 @@ public class Scheduler {
     }
 
     public void start() {
-        for (int i = 0; i < workerCount; i++) {
-            Worker worker = new Worker(taskQueue, resultStore, 3, jobRepository);
-            threadPool.submit(worker);
-        }
-        System.out.println("[SCHEDULER] Started with " + workerCount + " workers");
+    for (int i = 0; i < workerCount; i++) {
+        Worker worker = new Worker(taskQueue, resultStore, 3, jobRepository);
+        threadPool.submit(worker);
     }
+
+    jobRepository.loadPendingJobs().forEach(taskQueue::put);
+
+    System.out.println("[SCHEDULER] Started with " + workerCount + " workers");
+}
 
     public void submit(JobTask<?> job, String jobType) {
         jobRepository.saveJob(job, jobType);
@@ -43,7 +46,6 @@ public class Scheduler {
 
     public void shutdown() {
         threadPool.shutdown();
-        jobRepository.loadPendingJobs();
         System.out.println("[SCHEDULER] Shutting down...");
     }
 }
